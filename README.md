@@ -1,3 +1,12 @@
+this project has been relized as an exam MDP(22/23), held by Michele Loreti and Luca Padovani of the university of Camerino
+
+
+
+
+
+
+it:
+
 Il progetto è stato realizzato seguendo lo schema MVC
 
 # MODEL:
