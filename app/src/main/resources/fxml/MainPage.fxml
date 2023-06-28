@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="500.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#pressedKey" prefHeight="408.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.followme.app.MainSimulationController">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="openFile" mnemonicParsing="false" onAction="#onOpenFile" prefHeight="26.0" prefWidth="22.0">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Apps-Run-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="step" mnemonicParsing="false" onAction="#onStep">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Step-Forward-Hot-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="zoomIn" mnemonicParsing="false" onAction="#onZoomIn" prefHeight="45.0" prefWidth="58.0">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Zoom-In-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="zoomOut" mnemonicParsing="false" onAction="#onZoomOut" prefHeight="44.0" prefWidth="54.0">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Zoom-Out-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="left" mnemonicParsing="false" onAction="#onLeft">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Button-Previous-icon-2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="up" mnemonicParsing="false" onAction="#onUp" prefHeight="46.0" prefWidth="55.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Button-Upload-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="right" mnemonicParsing="false" onAction="#onRight" prefHeight="46.0" prefWidth="51.0">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Button-Next-icon-2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="down" mnemonicParsing="false" onAction="#onDown" prefHeight="46.0" prefWidth="48.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Button-Download-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="clear" mnemonicParsing="false" onAction="#onClear">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Clear-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="setTU" mnemonicParsing="false" onAction="#onSetTU" prefHeight="47.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tool-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="startFor" mnemonicParsing="false" onAction="#onStartFor" prefHeight="48.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Skip-forward-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time_unit:" />
+            <TextField fx:id="tuTextField" text="1.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start for:" wrappingWidth="73.04766845703125" />
+            <TextField fx:id="sfTextField" text="1" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="329.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+         <children>
+            <Group fx:id="cartesian" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="376.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.followme.app.SimulationController">
+   <children>
+      <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero dei robot da generare :" wrappingWidth="179.14181518554688" />
+      <Text layoutX="14.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File contenete il programma:" wrappingWidth="159.01171875" />
+      <Text fx:id="textProg" layoutX="172.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.53668212890625" />
+      <Text layoutX="14.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File contenente l'ambiente:" wrappingWidth="159.01171875" />
+      <Button fx:id="progButton" accessibleRole="IMAGE_VIEW" layoutX="358.0" layoutY="188.0" mnemonicParsing="false" onAction="#selectProgFile">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Folder-Open-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="envButton" layoutX="358.0" layoutY="136.0" mnemonicParsing="false" onAction="#selectEnvFile">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Folder-Open-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="startButton" layoutX="407.0" layoutY="336.0" mnemonicParsing="false" onAction="#startApplication" text="Start" />
+      <Text fx:id="textEnv" layoutX="164.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="110.936767578125" />
+      <TextField fx:id="nBotText" layoutX="208.0" layoutY="60.0" />
+   </children>
+</AnchorPane>
